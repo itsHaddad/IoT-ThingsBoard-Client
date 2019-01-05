@@ -60,6 +60,7 @@ while running:
     data['temperature'] = round(uniform(25, 46),2)
     data['pressure']    = round(uniform(1, 10),2)
     data['humidity']    = round(uniform(20, 50),2)
+    data['machine-state'] = "on"
     data_out=json.dumps(data) #create JSON object
     print("published topic",topic, "data out= ",data_out)
     ret=client.publish(topic,data_out,0)    #publish    
